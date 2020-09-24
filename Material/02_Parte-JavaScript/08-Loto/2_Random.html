@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> 2_Random </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+<script type="text/javascript">
+    numero = new Array ();
+    numero[0]="./imagenes/0.jpg";
+    numero[1]="./imagenes/1.jpg";
+    numero[2]="./imagenes/2.jpg";
+    numero[3]="./imagenes/3.jpg";
+    numero[4]="./imagenes/4.jpg";
+    numero[5]="./imagenes/5.jpg";
+    numero[6]="./imagenes/6.jpg";
+    numero[7]="./imagenes/7.jpg";
+    numero[8]="./imagenes/8.jpg";
+    numero[9]="./imagenes/9.jpg";
+
+	function cambiar() {
+        n1();
+        n2();
+        n3();
+        n4();
+        n5();
+    }
+    function n1() {
+        var n1=Math.floor(Math.random()*(10));
+		document.getElementById("n1").src=numero[n1];
+        temp1=setTimeout("n1()",100);
+    }
+    function n2() {
+        var n2=Math.floor(Math.random()*(10));
+		document.getElementById("n2").src=numero[n2];
+        temp2=setTimeout("n2()",100);
+    }
+    function n3() {
+        var n3=Math.floor(Math.random()*(10));
+		document.getElementById("n3").src=numero[n3];
+        temp3=setTimeout("n3()",100);
+    }
+    function n4() {
+        var n4=Math.floor(Math.random()*(10));
+		document.getElementById("n4").src=numero[n4];
+        temp4=setTimeout("n4()",100);
+    }
+    function n5() {
+        var n5=Math.floor(Math.random()*(10));
+		document.getElementById("n5").src=numero[n5];
+        temp5=setTimeout("n5()",100);
+    }
+    function parar(n) {
+        clearTimeout(n);
+    }
+    function stop() {
+        clearTimeout(temp1);
+        clearTimeout(temp2);
+        clearTimeout(temp3);
+        clearTimeout(temp4);
+        clearTimeout(temp5);
+        document.getElementById('start').style.display=''; 
+        document.getElementById("stop").style.display='none';
+    }
+</script>
+<BODY>
+    <p align="center">
+        <input type="button" id="start" value="Start" onclick="cambiar(); document.getElementById('stop').style.display=''; this.style.display='none'">
+        <input type="button" id="stop" style="display: none;" value="Stop" onclick="stop();document.getElementById('start').style.display=''; this.style.display='none'">
+        <br><br>
+        <table border="1">
+            <tr>
+                <td height="310"><img src="./imagenes/0.jpg" id="n1" width="200"></td>
+                <td><img src="./imagenes/0.jpg" id="n2" width="200"></td>
+                <td><img src="./imagenes/0.jpg" id="n3" width="200"></td>
+                <td><img src="./imagenes/0.jpg" id="n4" width="200"></td>
+                <td><img src="./imagenes/0.jpg" id="n5" width="200"></td>
+            </tr>
+            <tr align="center">
+                <td><input type="button" value="Parar" onclick="parar(temp1)"></td>
+                <td><input type="button" value="Parar" onclick="parar(temp2)"></td>
+                <td><input type="button" value="Parar" onclick="parar(temp3)"></td>
+                <td><input type="button" value="Parar" onclick="parar(temp4)"></td>
+                <td><input type="button" value="Parar" onclick="parar(temp5)"></td>
+            </tr>
+        </table>
+    </p>
+</BODY>
+</HTML>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>04-Formularios.html</title>
+  <script src="java.js"></script>
+ </head>
+ <body>
+  <center>
+  <h1>Formulario</h1>
+<form>
+  <p>Nombre: <input type="text" id="nombre" name="nombre" size="40" required placeholder="Su nombre" maxlength="15"></p>
+  <p>Apellido <input type="text" id="apellido" name="apellido" size="40" required placeholder="Su apellido" maxlength="15"></p>
+  <p>Edad <select id="edad" name="edad" required>
+    <option>...</option>
+    <option value="false">Menor</option>
+    <option value="true">Mayor</option>
+  </select></p>
+  <p>Sexo:
+    <input type="radio" id="hm" name="hm" required onchange="sexo='h'"> Hombre
+    <input type="radio" id="hm" name="hm" required onchange="sexo='m'"> Mujer
+    <input type="radio" id="hm" name="hm" required onchange="sexo='o'"> Otro
+  </p>
+  <p>
+    <input type="submit" value="Enviar" onclick="validar()">
+    <input type="reset" value="Borrar">
+  </p>
+</form>
+</table>
+ </body>
+</html>

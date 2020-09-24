@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> 07-Arrays FOR </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+<script type="text/javascript">
+    var a=2;
+	function cambiar() {
+		if (a==1) 
+            foto.src="./Imagenes/Enero.jpg";
+        if (a==2) 
+            foto.src="./Imagenes/Febrero.jpg";
+        if (a==3) 
+            foto.src="./Imagenes/Marzo.jpg";
+        if (a==4) {
+            foto.src="./Imagenes/abril.jpg";
+            a=0;
+        }
+        if (a==5) 
+            foto.src="./";
+        if (a==6) 
+            foto.src="./";
+        if (a==7) 
+            foto.src="./";
+        if (a==8) 
+            foto.src="./";
+        if (a==9) 
+            foto.src="./";
+        if (a==10) 
+            foto.src="./";
+        if (a==11) 
+            foto.src="./";
+        a=a+1;
+        }
+    //var dias = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"]
+    //for (i = 0; i <= dias.length - 1; i++ ) {
+     //   document.write( dias[i] + "<br>")
+        
+  //  }
+</script>
+<BODY>
+<input type="button" value="cambiar" onclick="cambiar()"><br><br>
+<img src="./Imagenes/Enero.jpg" id="foto" width="200">
+</BODY>
+</HTML>

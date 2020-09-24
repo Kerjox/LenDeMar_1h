@@ -1,0 +1,67 @@
+.contenedor {
+  width: 60%;
+  height: 75%;
+  background-color: #ff0000;
+  margin: 0 auto;
+}
+
+.cabecera {
+  height: 20%;
+  background-color: #8000ff;
+}
+
+.logo {
+  float: left;
+  height: 110px;
+  width: 110px;
+  background-color: #186461;
+}
+
+.titulo {
+  height: 100%;
+  background-color: #fff111;
+}
+
+.titulo2 {
+  vertical-align: middle;
+}
+
+h1 {
+  vertical-align: middle;
+  font-family: Arial;
+}
+
+.menu {
+  background-color: #33cccc;
+  height: 70%;
+  width: 17%;
+  float: left;
+}
+
+.cuerpo {
+  background-color: #996666;
+  height: 70%;
+  width: 100%;
+}
+
+.pie {
+  background-color: #00ff66;
+  height: 10%;
+}
+
+ul {
+  margin-left: 0px;
+  margin-top: 10px;
+  list-style-type: none;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+a:hover {
+  color: #ff0000;
+  font-family: Arial;
+}

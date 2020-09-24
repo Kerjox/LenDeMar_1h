@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> 04-Ejercicio_Dormulario </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">.
+<script type="text/javascript">
+function idioma(idi) {
+    if (idi=='es') {
+        document.getElementById("es").style.display="";
+        document.getElementById("en").style.display="none";
+        document.getElementById("fr").style.display="none";
+    }
+    if (idi=='en') {
+        document.getElementById("es").style.display="none";
+        document.getElementById("en").style.display="";
+        document.getElementById("fr").style.display="none";
+    }
+    if (idi=='fr') {
+        document.getElementById("es").style.display="none";
+        document.getElementById("en").style.display="none";
+        document.getElementById("fr").style.display="";
+    }
+}
+</script>
+</HEAD>
+
+<BODY>
+    <table width="60%" align="center">
+        <tr align="center">
+            <td>
+                <img src="./Imagenes/España.webp" id="fes" width="200" onmouseover="idioma('es')">
+            </td>
+            <td>
+                <img src="./Imagenes/England.svg" id="fen" width="200" onmouseover="idioma('en')">
+            </td>
+            <td>
+                <img src="./Imagenes/Francia.webp" id="ffr" width="200" onmouseover="idioma('fr')">
+            </td>
+        </tr>
+        <tr>
+            <td style="display: " id="es" colspan="3">
+            El primer vehículo 100% eléctrico de la nueva era de Volkswagen llegará al mercado español el año que viene. En Alemania, la versión básica con 300 kilómetros de autonomía estará por debajo de los 30.000 euros sin incluir las ayudas públicas a su compra.
+            </td>
+        </tr>
+        <tr>
+            <td style="display: none;" id="en" colspan="3">
+                The first 100% electric vehicle of the new era of Volkswagen will reach the Spanish market next year. In Germany, the basic version with 300 kilometers of autonomy will be below 30,000 euros without including public aid for its purchase.
+            </td>
+        </tr>
+        <tr>
+            <td style="display: none;" id="fr" colspan="3">
+                Le premier véhicule 100% électrique de la nouvelle ère de Volkswagen arrivera sur le marché espagnol l'année prochaine. En Allemagne, la version de base avec 300 kilomètres d'autonomie sera inférieure à 30 000 euros sans l'aide publique à son achat.
+            </td>
+        </tr>
+</table>
+</BODY>
+</HTML>

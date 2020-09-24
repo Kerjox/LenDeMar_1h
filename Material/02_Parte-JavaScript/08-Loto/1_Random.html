@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> 1_Random </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+<script type="text/javascript">
+    numero = new Array ();
+    numero[0]="./imagenes/0.jpg";
+    numero[1]="./imagenes/1.jpg";
+    numero[2]="./imagenes/2.jpg";
+    numero[3]="./imagenes/3.jpg";
+    numero[4]="./imagenes/4.jpg";
+    numero[5]="./imagenes/5.jpg";
+    numero[6]="./imagenes/6.jpg";
+    numero[7]="./imagenes/7.jpg";
+    numero[8]="./imagenes/8.jpg";
+    numero[9]="./imagenes/9.jpg";
+
+	function cambiar() {
+		document.getElementById("n1").src=numero[Math.floor(Math.random()*(10))];
+		document.getElementById("n2").src=numero[Math.floor(Math.random()*(10))];
+		document.getElementById("n3").src=numero[Math.floor(Math.random()*(10))];
+        var n4=Math.floor(Math.random()*(10));
+		document.getElementById("n4").src=numero[n4];
+        var n5=Math.floor(Math.random()*(10));
+		document.getElementById("n5").src=numero[n5];
+    }
+</script>
+<BODY>
+    <p align="center">
+        <input type="button" value="Generar" onclick="cambiar()">
+        <br><br>
+        <table border="1">
+            <tr>
+                <td><img src="./imagenes/0.jpg" id="n1" width="200"></td>
+                <td><img src="./imagenes/0.jpg" id="n2" width="200"></td>
+                <td><img src="./imagenes/0.jpg" id="n3" width="200"></td>
+                <td><img src="./imagenes/0.jpg" id="n4" width="200"></td>
+                <td><img src="./imagenes/0.jpg" id="n5" width="200"></td>
+            </tr>
+        </table>
+    </p>
+</BODY>
+</HTML>

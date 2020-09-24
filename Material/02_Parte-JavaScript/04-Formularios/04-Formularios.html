@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>04-Formularios.html</title>
+  <script type="text/javascript">
+    function comprobar(argument) {
+      // body...
+      if (datos.pass.value!="salesianos") {
+        
+        window.alert("Password incorrecta");
+        datos.pass.focus();
+        datos.pass.select();
+      }
+    }
+    function comunidad(argument) {
+      // body...
+      if (datos.ciudad.value==50 || datos.ciudad.value==44 || datos.ciudad.value==22){
+        window.alert("Aragones");
+      }
+      else{
+        window.alert("No Aragones");
+      }
+    }
+  </script>
+ </head>
+ <body>
+  <center>
+  <h1>Formulario</h1>
+  <form name="datos" id="datos">
+  <table align="center" border="1" cellpadding="5px" bgcolor="#CCCCCC">
+    <tr>
+      <td>Nombre y apellidos</td>
+      <td>
+      	<input type="text" name="nya" id="nya" size="30" required placeholder="Nombre y apellidos" maxlength="30" title="Escribe el nombre y el apellido" ></td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td>
+      	<input type="password" name="pass" id="pass" required placeholder="Pon la contraseña" title="Introcude un caracter especial" maxlength="10" size="15" ></td>
+    </tr>
+    <tr>
+      <td>Ciudad</td>
+      <td>
+      	<select name="ciudad" id="ciudad" onchange="comunidad()">
+      		<option value="">...</option>
+      		<option value="50">Zaragoza</option>
+      		<option value="22">Huesca</option>
+      		<option value="44">Teruel</option>
+      		<option value="45">Sevilla</option>
+      </select></td>
+    </tr>
+    <tr>
+      <td>Sexo</td>
+      <td>
+      	Masculino<input type="radio" name="sexo" id="sexo" value="M">
+      	Femenino<input type="radio" name="sexo" id="sexo" value="F">
+      </td>
+    </tr>
+    <tr>
+    	<td>Fecha nacimiento</td>
+    	<td>
+    		<input type="date" name="fecha" id="fecha" min="1900-01-01"></td>
+    </tr>
+    <tr>
+      <td>Teléfono</td>
+      <td>
+      	<input type="tel" name="tel" id="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"></td>
+    </tr>
+    <tr>
+    	<td>Color fav.</td>
+    	<td>
+    		<input type="color" name="favcolor">
+    	</td>
+    </tr>
+    <tr>
+    	<td>Correo</td>
+    	<td>
+    		<input type="email" name="email">
+    	</td>
+    </tr>
+    <tr>
+    	<td>Valoración</td>
+    	<td>
+    		<input type="range" name="points" min="0" max="10"> Del 0 al 10
+    	</td>
+    </tr>
+    <tr>
+      <td>Aficiones</td>
+      <td>
+      	Deporte <input type="checkbox" name="aficiones" id="aficiones" value="1">
+      	música <input type="checkbox" name="aficiones" id="aficiones" value="2">
+      	Cine <input type="checkbox" name="aficiones" id="aficiones" value="3">
+      	Videojuegos <input type="checkbox" name="aficiones" id="aficiones" value="4">
+      </td>
+    </tr>
+    <tr>
+    	<td>Comentarios</td>
+    	<td><textarea name="comentarios" id="comentarios" rows="5" cols="40"></textarea></td>
+    </tr>
+    <tr>
+    	<td>Foto</td>
+    	<td><input type="file" name="foto" id="foto"></td>
+    </tr>
+    <tr>
+    	<td colspan="2" align="center">
+    		<input type="submit" value="Enviar">
+			<input type="reset" value="Borrar">
+    	</td>
+    </tr>
+</table>
+</form>
+  
+
+
+
+  <form>
+  <p>Nombre: <input type="text" name="nombre" size="40" required placeholder="Su nombre" maxlength="15"></p>
+  <p>Apellido <input type="text" name="apellido" size="40" required placeholder="Su apellido" maxlength="15"></p>
+  <p>Edad <select name="edad">
+    <option>...</option>
+    <option>Menor</option>
+    <option>Mayor</option>
+  </select></p>
+  <p>Sexo:
+    <input type="radio" name="hm" value="h"> Hombre
+    <input type="radio" name="hm" value="m"> Mujer
+    <input type="radio" name="hm" value="o"> Otro
+  </p>
+  <p>
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Borrar">
+  </p>
+</form>
+</table>
+ </body>
+</html>

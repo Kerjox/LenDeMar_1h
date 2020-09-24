@@ -1,0 +1,27 @@
+.celdas{
+	width: 200px;
+	height: 200px;
+}
+
+.imagen1{
+	width: 200px;
+}
+
+.visor{
+	margin-left: 10px;
+	float: left;
+	padding: 20px;
+	background-color: #8CBC32;
+}
+
+.imagen{
+	float: left;
+}
+
+img{
+	width: 200px;
+}
+img#grande{
+	width: 500px;
+	height: 500px;
+}

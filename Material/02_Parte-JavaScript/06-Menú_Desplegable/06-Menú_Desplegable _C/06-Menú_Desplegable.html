@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> 06-Menú_Desplegable </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+<script type="text/javascript">
+function mostrar(m) {
+        if (m.style.visibility=="hidden") {
+            m.style.visibility="visible";
+        } else {
+            m.style.visibility="hidden";
+        }
+    }
+</script>
+<link rel="stylesheet" type="text/css" href="estilos.css">
+<BODY>
+<table border="0">
+    <tr align="center">
+        <td onclick="mostrar(gm)" class="menu">Grado Medio</td>
+        <td onclick="mostrar(gs)" class="menu">Grado Superior</td>
+        <td onclick="mostrar(batch)" class="menu">Bachillerato</td>
+    </tr>
+    <tr>
+        <td id="gm" class="lista" style="visibility: hidden;">
+            <ul>
+                <li>Informática</li>
+                <li>Mecanizado</li>
+                <li>Automoción</li>
+            </ul>
+        </td>
+        <td id="gs" class="lista" style="visibility: hidden;">
+            <ul>
+                <li>Telecomunicaciones</li>
+                <li>Robótica</li>
+                <li>Electricidad</li>
+            </ul>
+        </td>
+        <td id="batch" class="lista" style="visibility: hidden;">
+            <ul>
+                <li>Humanidades</li>
+                <li>Ciencias</li>
+                <li>Tecnológico</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+</BODY>
+</HTML>

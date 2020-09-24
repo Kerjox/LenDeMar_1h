@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'alba_superregular';
+    src: url('../fonts/albas-webfont.woff2') format('woff2'),
+         url('../fonts/albas-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'poiret_oneregular';
+    src: url('../fonts/poiretone-regular-webfont.woff2') format('woff2'),
+         url('../fonts/poiretone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body {
+    margin: 0px;
+}
+
+.delimitador {
+    margin: 0px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.menu-lateral {
+    float: left;
+    width: 15%;
+    height: 100%;
+}
+
+.mapa {
+    position: relative;
+    float: right;
+    width: 85%;
+    height: 100%;
+    background-color: burlywood;
+    align-content: center;
+}
+
+.img-mapa {
+    position: absolute;
+    max-width: 800px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+    background-color: brown;
+}
+
+.scoreboard {
+    width: 100%;
+    height: 300px;
+    background-color: aquamarine;
+}
+
+.boton {
+	background: #0bc2cf;
+	color: #fff;
+	display: inline-block;
+	font-size: 1.25em;
+	margin: 7px;
+	padding: 10px 0px;
+	text-align: center;
+	width: 200px;
+	text-decoration: none;
+    font-family: sans-serif;
+    box-shadow: 0px 3px 0px #004e61;
+}
+
+.boton.refrescar {
+    background: rgb(255, 145, 0);
+	color: #fff;
+	display: inline-block;
+	font-size: 1.25em;
+	margin: 7px;
+	padding: 10px 0px;
+	text-align: center;
+	width: 200px;
+	text-decoration: none;
+    font-family: sans-serif;
+    box-shadow: 0px 3px 0px #724a00;
+}
+
+.boton:hover {
+	box-shadow: none;
+	padding-top: 7px;
+}
+
+.boton-inicio {
+    width: 100%;
+    height: 7%;
+    text-align: center;
+    background: aquamarine;
+}
+
+
+.t {
+    font-size: 22px;
+    text-align: center;
+    font-family: 'poiret_oneregular';
+    font-weight: bold;
+    margin: auto;
+}
+
+.t.scores {
+    font-size: 18px;
+    font-weight: normal;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.pais {
+    width: 100%;
+    height: 60px;
+    margin: auto;
+}
+
+.t.pais {
+    font-size: 20px;
+    margin: auto;
+}
+
+.final {
+    width: 100%;
+    height: 250px;
+    background-color: blueviolet;
+    margin: auto;
+}

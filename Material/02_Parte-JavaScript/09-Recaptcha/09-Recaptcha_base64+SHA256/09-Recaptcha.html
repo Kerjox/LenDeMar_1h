@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> 09-Recaptcha_base64+SHA256 </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+<script src="java.js"></script>
+<script src="crypto.js"></script>
+<meta charset="utf-8">
+<BODY onload="cambiar()">
+        <table border="1" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td width="800" height="50" align="center" colspan="2"><p><h1>Verifica que no eres un robot</h1></p></td>
+            </tr>
+            <tr>
+                <td height="100" height="50" width="600" align="center">
+                    <img src="" id="img" width="300" height="100"></td>
+                <td><img src="./imagenes/refrescar.jpg" style="cursor: pointer;" onclick="cambiar()"></td>
+            </tr>
+            <tr>
+                <td height="50" colspan="2" align="center">
+                    <input type="text" id="sol" name="solucion" size="50"></td>
+            </tr>
+            <tr>
+                <td height="50" colspan="2" align="center">
+                    <input type="button" name="Comprobar" value="Comprobar" onclick="comprobar()"></td>
+            </tr>
+        </table>
+</BODY>
+</HTML>

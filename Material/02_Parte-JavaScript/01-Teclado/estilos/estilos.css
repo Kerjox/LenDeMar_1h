@@ -1,0 +1,45 @@
+.teclado{
+	height: 175px;
+	width: 375px;
+	background-color: #AA1517
+}
+
+.tecladoalfa{
+	height: 120px;
+	width: 241px;
+	float: left;
+}
+
+.filaC{
+	height: 55px;
+	width: 375px;
+	text-align: center;
+}
+
+.filaA{
+	width: 241px;
+}
+
+.tecla{
+	float: left;
+}
+
+.tecladonum{
+	height: 120px; 
+	width: 110px;
+	float: right;
+}
+
+.filaN{
+	width: 110px;
+	float: right;
+}
+
+.teclaN{
+	float: left;
+	margin: 1px;
+}
+
+img{
+	cursor: pointer;
+}

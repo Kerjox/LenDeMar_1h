@@ -1,0 +1,112 @@
+﻿<html>
+
+<head>
+
+	<title>01-Basico.html</title>
+
+	
+	
+<style type="text/css">	
+	
+	p.rojo{color:red}
+	
+</style>
+	
+<script language="JavaScript" src="js/jquery-1.7.2.js"></script>
+	
+	
+<script language="JavaScript">	
+	
+$(document).ready(
+		function()
+		{
+			$("*").css("font-size","18px");
+			
+			$("p").css("font-family","Century Gothic");
+			
+			$("p.rojo").css("font-family","Arial");
+			
+			
+			$("#probar1").click(
+					function(){
+					$("p.rojo").hide();
+					$("li").css("color","#009966");
+					$("li:first").css("color","red");
+					
+							}
+				);
+			
+			$("#probar2").dblclick(
+				function(){
+				$("img").hide();
+				$(this).hide();
+				
+				
+				}
+			);
+			
+			
+			$("#probar3").click(
+				function(){
+				$("p").css("border","10px solid");
+				//El :text se refiere a los elementos type="text"
+				$(":text").css("font-size","8pt");
+				
+						}
+			
+			);
+			
+		});
+	
+	
+</script>
+	
+</head>
+
+
+<body>
+
+
+<div>
+<p class="rojo">
+
+Los elefantes o elefántidos (Elephantidae) son una familia de mamíferos
+ placentarios del orden Proboscidea. Antiguamente se clasificaban, junto
+ con otros animales de piel gruesa, en el orden, ahora inválido, de los paquidermos
+ (Pachydermata). Existen hoy en día tres especies y diversas subespecies.
+ Entre los géneros extintos de esta familia destacan los mamuts.
+
+Los elefantes son los animales terrestres más grandes que existen actualmente
+.1 El periodo de gestación es de 22 meses, el más largo en cualquier animal terrestre.
+ El peso al nacer usualmente es 120 kg. Normalmente viven de 50 a 70 años, pero registros
+ antiguos documentan edades máximas de 82 años.2 El elefante más grande que se ha cazado,
+ de los que se tiene registro, pesó alrededor de 11.000 kg (Angola, 1956)3 , alcanzando una
+ altura en la cruz de 3,96 m, un metro más alto que el elefante africano promedio.4 El elefante
+ más pequeño, de alrededor del tamaño de una cría o un cerdo grande, es una especie prehistórica
+ que existió en la isla de Creta, Elephas creticus, durante el Pleistoceno.5
+
+</p>
+
+</div>
+
+<ul>
+	<li> Opcion 1 </li>
+	<li> Opcion 2 </li>
+	<li> Opcion 3 </li>
+
+</ul>
+
+<img src="imagenes/sz.jpg">
+</br>
+
+
+<input type="button" value="Probar 1" id="probar1" name="probar1">
+
+<input type="button" value="Probar 2" id="probar2" name="probar2">
+
+<input type="button" value="Probar 3" id="probar3" name="probar3">
+
+
+
+
+</body>

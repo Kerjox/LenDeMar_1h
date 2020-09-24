@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> 06-Menú_Desplegable </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+<script type="text/javascript">
+function mostrar(m) {
+    if (m=='gm') {
+        if (document.getElementById("gm").style.display=="") {
+            document.getElementById("gm").style.display="none";
+        } else {
+            document.getElementById("gm").style.display="";
+       		document.getElementById("gs").style.display="none";
+        	document.getElementById("batch").style.display="none"; 
+        }
+    }
+if (m=='gs') {
+    if (document.getElementById("gs").style.display=="") {
+        document.getElementById("gs").style.display="none";
+    } else {
+        document.getElementById("gm").style.display="none";
+        document.getElementById("gs").style.display="";
+        document.getElementById("batch").style.display="none"; 
+    }
+}
+if (m=='batch') {
+    if (document.getElementById("batch").style.display=="") {
+        document.getElementById("batch").style.display="none";
+    } else {
+        document.getElementById("gm").style.display="none";
+        document.getElementById("gs").style.display="none";
+        document.getElementById("batch").style.display="";  
+    }
+    
+}
+}
+</script>
+
+<BODY>
+<table border="0" id="manu">
+    <tr>
+        <td onclick="mostrar('gm')">Ciclos formativos GM</td>
+    </tr>
+    <tr>
+        <td id="gm" style="display: none;">
+            <ul>
+                <li>Informática</li>
+                <li>Mecanizado</li>
+                <li>Automoción</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td onclick="mostrar('gs')">Ciclos formativos GS</td>
+    </tr>
+        <tr>
+            <td id="gs" style="display: none;">
+                <ul>
+                    <li>Telecomunicaciones</li>
+                    <li>Robótica</li>
+                    <li>Electricidad</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td onclick="mostrar('batch')">Bachilerato</td>
+        </tr>
+            <tr>
+                <td id="batch" style="display: none;">
+                    <ul>
+                        <li>Humanidades</li>
+                        <li>Ciencias</li>
+                        <li>Tecnológico</li>
+                    </ul>
+                </td>
+            </tr>
+</table>
+</BODY>
+</HTML>

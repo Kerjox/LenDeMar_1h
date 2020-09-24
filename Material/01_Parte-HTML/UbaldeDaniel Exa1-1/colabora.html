@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> colabora.html </TITLE>
+</HEAD>
+<link rel="stylesheet" type="text/css" href="./estilos.css">
+<BODY >
+<div class="contenedor" >
+
+<div class="cabecera">
+	<img width="100%" src="./imagenes/cabecera.jpg" border="0">
+</div>
+
+<div class="menu">
+	<ul>
+	<li><a href="./index.html"> Inicio</a></li>
+	<li><a href="./quienes.html"> Quienes somos</a></li>
+	<li><a href="./proyectos.html"> Proyectos</a></li>
+	<li><a href="./noticias.html"> Noticias</a></li>
+	<li><a href="./declaraciones.html"> Declaraciones</a></li>
+	<li><a href="colabora.html"> Colabora</a></li>
+	</ul>
+</div>
+<div class="cuerpo">
+<!-- Preparar el formulario de colabora -->
+<form>
+	<table cellspacing="2" cellpadding="0">
+		<tr align="center">
+			<td colspan="2" width="800px"><b><h3>Datos para acceder a la Web</h3></b><hr width="50%" align="center"></td>
+		</tr>
+		<tr>
+			<td width="150px">Email*</td>
+			<td><input type="email" name="email" id="email" required size="30"></td>
+		</tr>
+		<tr>
+			<td>Contraseña*</td>
+			<td><input type="password" name="pass" id="pass" required minlength="8" maxlength="16"></td>
+		</tr>
+		<tr align="center">
+			<td colspan="2"><b><h3>Datos personales</h3></b><hr width="50%" align="center"></td>
+		</tr>
+		<tr>
+			<td>Nombre*</td>
+			<td><input type="text" name="name" id="name" required></td>
+		</tr>
+		<tr>
+			<td>Apelidos*</td>
+			<td><input type="text" name="name2" id="name2" required size="30"></td>
+		</tr>
+		<tr>
+			<td>Fecha de nacimineto*</td>
+			<td><input type="date" name="date" id="date" required></td>
+		</tr>
+		<tr>
+			<td>Teléfono</td>
+			<td><input type="tel" name="tel" id="tel" maxlength="9" placeholder="Introduzca su número"></td>
+		</tr>
+		<tr>
+			<td>Movil</td>
+			<td><input type="tel" name="mov" id="mov" placeholder="Introduzca su número" maxlength="9"></td>
+		</tr>
+		<tr>
+			<td>¿Alumno en cursillo?</td>
+			<td>
+				<select>
+					<option value="Si">Si</option>
+					<option value="No">No</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="radio" name="dis" id="dis" value="Si">Si
+				<input type="radio" name="dis" id="dis" value="No">No</td>
+			<td>¿Sufre de alguna discapacidad?<br>Marque la casilla "si" si tiene un porcentaje de discapacidad igual o superior al 33%</td>
+		</tr>
+		<tr>
+			<td>Hobbies</td>
+			<td>
+				<input type="checkbox" name="Hobbies" id="Hobbies" value="VideoJuegos">VideoJuegos
+				<input type="checkbox" name="Hobbies" id="Hobbies" value="Musica">Música
+				<input type="checkbox" name="Hobbies" id="Hobbies" value="Deporte">Deporte
+				<input type="checkbox" name="Hobbies" id="Hobbies" value="Fiesta">Fiesta
+				<input type="checkbox" name="Hobbies" id="Hobbies" value="Cine">Cine
+				<input type="checkbox" name="Hobbies" id="Hobbies" value="Otros">Otros
+			</td>
+		</tr>
+		<tr>
+			<td valign="10%">Comentarios</td>
+			<td>
+				<textarea cols="50" rows="6"></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2"><hr align="center"></td>
+		</tr>
+		<tr align="right">
+			<td colspan="2">
+				<input type="submit" name="submit" id="submit" value="Enviar">
+				<input type="reset" name="reset" id="reset" value="Borrar">
+			</td>
+		</tr>
+	</table>
+</form>
+</div>
+
+<div class="pie">
+	<IMG SRC="./imagenes/pie.jpg" USEMAP="#pie.jpg" WIDTH=264 HEIGHT=48 BORDER=0>
+		<MAP NAME="pie.jpg">
+			<AREA SHAPE=RECT COORDS="101,5,134,38" HREF="./quienes.html" ALT="Quienes" OnMouseOver="window.status='cursor: pointer'; return true">
+</div>
+
+</div>
+ 
+</BODY>
+</HTML>

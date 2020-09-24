@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>01-Efectos.html</TITLE>
+<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+<script type="text/javascript" language="JavaScript">
+
+$(document).ready(
+ function()
+ {
+	$("#hd").click(
+	   function()
+	   {
+		$("img").hide(500);
+	   }
+	   );
+	$("#sh").click(
+	   function()
+	   {
+		$("img").rotate(50);
+	   });
+	$("#tg").click(
+	   function()
+	   {
+		$("img").toggle(500);
+	   });
+	$("#su").click(
+	   function()
+	   {
+		$("img").slideUp(500);
+	   });
+	$("#sd").click(
+	   function()
+	   {
+		$("img").slideDown(500);
+	   });
+	$("#fo").click(
+	   function()
+	   {
+		$("img").fadeOut(500);
+	   });
+	$("#fi").click(
+	   function()
+	   {
+		$("img").fadeIn(500);
+	   });
+	$("#ft").click(
+	   function()
+	   {
+		$("img").fadeTo(500,0.30);
+	   });
+	$("#ani1").click(
+	   function()
+	   {		$("img").animate({opacity:0.3,marginLeft:"500px"},5000);
+	   });
+	$("#ani2").click(
+	   function()
+	   {
+		$("img").animate({height:"150px"},500);
+		$("img").animate({width:"500px"},500);
+		$("img").animate({height:"300px"},500);
+		$("img").animate({width:"100px"},500);
+	   });
+	$("#parar").click(
+	   function()
+	   {
+		$("img").stop();
+	   });
+
+
+
+});
+
+
+</script>
+
+</HEAD>
+
+<BODY>
+<p class="negro"> 
+Gonz�lez no controlar� a los sindicatos
+Aboga por comprobar los fondos p�blicos que reciben
+Catalu�a no cortar� la luz a las familias pobres
+La ONU para los pies a Uruguay con la marihuana
+Le quieren multar por acoger a inmigrantes
+3.860 a�os de c�rcel para tres etarras
+</p>
+<img src="./imagenes/ny.jpg" id="imagen"><BR>
+<input type="button" id="hd" value="Hide"/>
+<input type="button" id="sh" value="Show"/>
+<input type="button" id="su" value="Slide Up"/>
+<input type="button" id="sd" value="Slide Down"/>
+<input type="button" id="st" value="Slide Toggle"/><BR>
+<input type="button" id="fo" value="Fade Out"/>
+<input type="button" id="fi" value="Fade In"/>
+<input type="button" id="ft" value="Fade To"/><BR>
+<input type="button" id="ani1" value="Animation 1"/>
+<input type="button" id="ani2" value="Animation 2"/><BR>
+<input type="button" id="parar" value="Parar"/><BR>
+
+</BODY>
+</HTML>
+
+

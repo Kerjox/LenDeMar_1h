@@ -1,0 +1,78 @@
+.contenedor{
+	position: absolute;
+	margin-left:75px;
+	width:80%;
+	height:80%;
+	font-family: Century Gothic;
+	font-size: 12px;
+}
+
+.cabecera{
+	position:relative;
+	float:left;
+	width:100%;
+	height:20%
+	text-align:right;
+	margin-bottom:0;
+	background-color: white;
+	text-decoration-color: black;
+}
+
+.pie{
+	position:relative;
+	float:left;
+	height:10%;
+	width:100%;
+	background-color: white;
+	text-align: center;
+}
+
+.menu{
+	position:relative;
+	float:left;
+	width:20%;
+	background-color: white;
+	height: 70%;
+}
+
+.cuerpo{
+	position:relative;
+	float:left;
+	width:70%;
+	background-image: url('./imagenes/fondo.jpg'); 
+	padding:15px;
+	background-color: white;
+	height: 70%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+h4{
+	color:#0033FF;
+}
+
+ul{
+	float:left;
+	margin:10px;
+	padding:10px;
+	list-style-type:none;
+}
+
+a{
+	text-decoration:none;
+	color:#000000;
+}
+
+a:hover{
+	color:#3333FF;
+}
+
+td{
+	font-family: Century Gothic;
+	font-size: 12px;
+}
+
+textarea{
+	font-family: Century Gothic;
+	font-size: 12px;
+}

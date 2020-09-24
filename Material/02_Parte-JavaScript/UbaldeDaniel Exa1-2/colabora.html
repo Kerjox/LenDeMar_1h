@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> colabora.html </TITLE>
+</HEAD>
+<link rel="stylesheet" type="text/css" href="estilos.css">
+<script src="java.js"></script>
+<BODY onload="curs()">
+<div class="contenedor" >
+
+<div class="cabecera">
+	<img width="100%" src="./imagenes/cabecera.jpg" border="0">
+</div>
+
+<div class="menu">
+<ul>
+<li><a href="index.html"> Inicio</a></li>
+<li><a href="quienes.html"> Quienes somos</a></li>
+<li><a href="proyectos.html"> Proyectos</a></li>
+<li><a href="noticias.html"> Noticias</a></li>
+<li><a href="declaraciones.html"> Declaraciones</a></li>
+<li><a href="colabora.html"> Colabora</a></li>
+</ul></div>
+<div class="cuerpo">
+<form name="registro">
+<TABLE>
+<TR>
+	<TD colspan="2" align="center"><B>Datos para acceder a la web</B></TD>
+</TR>
+<TR>
+	<TD>Email*</TD>
+	<TD><input type="text" id="email" name="email" size="20" maxlength="10" value="" required="yes"></TD>
+</TR>
+<TR>
+	<TD>Contrase�a*</TD>
+	<TD><input type="password" id="contrase�a" name="contrase�a" size="20" maxlength="10" value="" required="yes"></TD>
+</TR>
+<TR>
+	<TD colspan="2" align="center"><B>Datos personales</B></TD>
+</TR>
+<TR>
+	<TD>Nombre*</TD>
+	<TD><input type="text" id="nombre" name="nombre" size="20" maxlength="10" value="" required="yes"></TD>
+</TR>
+<TR>
+	<TD>Apellidos*</TD>
+	<TD><input type="text" id="apellidos" name="apellidos" size="20" maxlength="10" value="" required="yes"><input type="text" id="apellidos2" name="apellidos2" size="20" maxlength="10" value="" required="yes"></TD>
+</TR>
+<TR>
+	<TD>Año de nacimiento*</TD>
+	<TD><input type="number" id="fecha" name="fecha" required="yes" maxlength="4" onblur="fech()">aaaa</TD>
+</TR>
+<TR>
+	<TD>Tel�fono</TD>
+	<TD><input type="text" id="telefono" required pattern="[0-9]{9}" placeholder="Introduzca su n�mero" required="no"></TD>
+</TR>
+<TR>
+	<TD>Movil</TD>
+	<TD><input type="text" id="movil" required pattern="[0-9]{9}" placeholder="Introduzca su n�mero" required="no"></TD>
+</TR>
+<br>
+<TR>
+	<TD>�Alumno en cursillo?</TD>
+	<TD><select id="cursillo" name="cursillo" onchange="curs()">
+							<option value="none">SI
+								<option value="">NO
+							</TD>
+	                        
+</TR>
+<TR id="radio">
+	<TD><input type="radio" id="si" name="si"value="si">Si
+		<input type="radio" id="si" name="si"value="no">No</TD>
+	<TD>�Sufre alguna discapacidad? <br> Marque la casilla si usted tiene un porcentaje de discapacidad igual o superior al 33%</TD>
+</TR>
+<TR>
+	<TD>Hobbies</TD>
+	<TD>Videojuegos<input type="checkbox" id="subraya" name="subraya" value="Videojuegos">&nbsp;Musica<input type="checkbox" id="subraya" name="subraya" value="Musica">&nbsp;Deporte<input type="checkbox" id="subraya" name="subraya" value="Deporte">&nbsp;Fiesta<input type="checkbox" id="subraya" name="subraya" value="Fiesta"> &nbsp;Cine<input type="checkbox" id="subraya" name="subraya" value="Cine">&nbsp;Otros<input type="checkbox" id="subraya" name="subraya" value="Otros"></TD>
+</TR>
+<TR>
+	<TD>Comentarios</TD>
+	<TD><textarea id="comentarios" name="comentarios" cols="50" rows="5"></textarea></TD>
+</TR>
+<TR id="filaE">
+	<TD colspan="2" align="center"><input type="submit" value="Enviar"><input type="reset" value="Borrar"></TD>
+</TR>
+</TABLE>
+</form>
+</div>
+
+
+</div>
+ 
+</BODY>
+</HTML>

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> 08-Aleatorios </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+<script type="text/javascript">
+    imagenes = new Array ();
+    imagenes[1]="./Imagenes/Enero.jpg";
+    imagenes[2]="./Imagenes/Febrero.jpg";
+    imagenes[3]="./Imagenes/Marzo.jpg";
+    imagenes[4]="./Imagenes/Abril.jpg";
+    imagenes[5]="./Imagenes/Mayo.jpg";
+    imagenes[6]="./Imagenes/Junio.jpg";
+    imagenes[7]="./Imagenes/Julio.jpg";
+    imagenes[8]="./Imagenes/Agosto.jpg";
+    imagenes[9]="./Imagenes/Septiembre.jpg";
+    imagenes[10]="./Imagenes/Octubre.jpg";
+    imagenes[11]="./Imagenes/Noviembre.jpg";
+    imagenes[12]="./Imagenes/Diciembre.jpg";
+
+	function cambiar() {
+        var numero=Math.floor(Math.random()*(12)+1);
+		foto.src=imagenes[numero];
+        tmp1=setTimeout("cambiar()",1000)
+    }
+    function stop() {
+        clearTimeout(tmp1);
+    }
+</script>
+<BODY>
+    <p align="center">
+        <input type="button" id="start" value="Start" onclick="cambiar(); document.getElementById('stop').style.display=''; this.style.display='none'">
+        <input type="button" id="stop" style="display: none;" value="Stop" onclick="stop();document.getElementById('start').style.display=''; this.style.display='none'">
+        <br><br>
+        <img src="./Imagenes/Enero.jpg" id="foto" width="200">
+    </p>
+</BODY>
+</HTML>

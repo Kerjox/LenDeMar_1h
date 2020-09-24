@@ -1,0 +1,57 @@
+p#resaltado {
+	font-family:Arial;
+	font-size:20pt;
+	color:red;
+	border-style:dotted;
+	border-width:9px
+}
+
+p#negrita {
+	font-weight: bold;
+}
+
+body {
+	background-color:#99FFFF;
+	margin-top:100px;
+	margin-left:40px;
+	background-image: url("../.././01-Estructura/Imagenes/Kerjox.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+td {
+	font-size:30px;
+	font-family:CenturyGothic;
+	border-top:1px;
+	border-right:5px
+}
+
+.borde {
+	border-color: blue;
+	border-style: solid;
+	border-width: 4px;
+
+}
+img:hover{
+	cursor: pointer;
+	border-radius: 2000px 1000px 2000px 1000px;
+	-webkit-transition: box-shadow 1.3s;
+	box-shadow: 1.5px 1.5px 15px 15px #FFFFFF;
+}
+a {
+	text-decoration: none;
+}
+a:hover{
+	color: green;
+	font-size: 20px;
+
+}
+
+a:link{
+	color: red;
+}
+
+.cursor{
+	cursor: url(imagen-inexistente.formato-desconocido), url();
+}
