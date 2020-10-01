@@ -1,0 +1,22 @@
+body {
+    background-color: azure;
+    font-size: 36pt;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+p {
+    text-indent: 2.5in;
+    background-color: aquamarine;
+    color: black;
+    font-weight: 10;
+}
+
+.perso {
+    text-indent: 20px;
+    color: brown;
+    text-decoration: overline;
+}
+
+#cuarto_Parafo {
+    color: red;
+}
