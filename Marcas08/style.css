@@ -1,0 +1,29 @@
+body {
+    background-color: azure;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+p {
+    color: black;
+    font-weight: 10;
+    margin-left: 2in;
+}
+
+h1 {
+    margin-left: 0.25in;
+    color: blue;
+    font-size: 36pt;
+    cursor: pointer;
+}
+
+h2 {
+    margin-left: 0.5in;
+    color: blueviolet;
+    font-size: 24pt;
+}
+
+.perso {
+    margin-left: 0.75in;
+    font-size: 20pt;
+    color: coral;
+}
