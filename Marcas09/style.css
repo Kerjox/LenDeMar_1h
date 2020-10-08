@@ -1,0 +1,30 @@
+.tablero {
+    background-color: aqua;
+    width: 400px;
+    height: 400px;
+}
+
+td {
+    background-color: bisque;
+    text-align: center;
+    font-size: 40pt;
+}
+
+.circle {
+    background-color: lime;
+    text-align: center;
+    margin: auto;
+    width: 33%;
+}
+
+.triangle {
+    background-color: orange;
+    text-align: center;
+    margin: auto;
+    width: 33%;
+}
+
+.fichas {
+    width: 1px;
+    height: 1px;
+}
