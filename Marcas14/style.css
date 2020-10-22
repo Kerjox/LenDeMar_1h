@@ -1,0 +1,14 @@
+div{
+    position: absolute;
+}
+
+a{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 32pt;
+    text-decoration: none;
+}
+
+#cero{
+    color: coral;
+}

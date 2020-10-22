@@ -1,0 +1,16 @@
+body{
+    background-color: orangered;
+}
+
+#imagen01{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+#imagen02{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 200px;
+}
