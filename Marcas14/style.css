@@ -12,3 +12,58 @@ a{
 #cero{
     color: coral;
 }
+
+#uno{
+    color: crimson;
+}
+
+#dos{
+    color: darkblue;
+}
+#tres{
+    color: darkgreen;
+}
+#cuatro{
+    color: darksalmon;
+}
+#cinco{
+    color: darkslategrey;
+}
+#seis{
+    color: darkviolet;
+}
+#siete{
+    color: dodgerblue;
+}
+#ocho{
+    color: greenyellow;
+}
+#nueve{
+    color: hotpink;
+}
+
+.pregunta{
+    width: 300px;
+    height: 200px;
+    margin-left: 150px;
+    margin-top: 80px;
+    border-width: 3;
+    border-style: dotted;
+    border-color: red;
+}
+
+h3{
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    font-size: 16pt;
+}
+
+p{
+    color: gray;
+    margin: 10px;
+    text-align: justify;
+    font-size: 13pt;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
