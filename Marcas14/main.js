@@ -1,17 +1,80 @@
-function comprobar() {
-    let objeto = event.srcElement;
-    console.log(objeto);
+const respuestas = [8, 1, 9, 0];
+aciertos = new Array(respuestas.length).fill(0);
+
+function comprobar(number) {
+
+    if (numPregunta > 2) {
+
+       if (number == respuestas[numPregunta - 3]) { // Comprobar acierto
+
+            aciertos[numPregunta - 3] = 1;          // Meter 1 en el array
+
+            if (numPregunta - 2 == respuestas.length) {
+                
+                if (checkPass()) {
+                    
+                    alert("Acertaste al contraseña");
+
+                }else{
+
+                    alert("Fallaste en algún valor de la contraseña");
+
+                }
+
+            } else {
+
+                alert("Bien");
+                pasarPreguntas(true);
+
+            }
+            
+
+        } else {
+
+            alert("Mal");
+        
+        } 
+
+    }
+
+    
+}
+
+function checkPass() {
+
+    var cont = 0;
+    
+    for (let i = 0; i < aciertos.length; i++) {
+        
+        if (aciertos[i] == 1) {
+            
+            cont++;
+
+        }
+        
+    }
+
+    if(cont == 4){
+
+        return true;
+
+    }else{
+
+        return false;
+
+    }
+
 }
 
 let numPregunta = 1;
 
-function pasarPreguntas() {
+function pasarPreguntas(acierto) {
 
     
     let tecla = event.key;
     console.log("Tecla pulsada " + "'" + tecla + "'");
     
-    if ((tecla == "s" || tecla == "S") && numPregunta != 6) {
+    if ((tecla == "s" || tecla == "S" || acierto) && numPregunta != 6) {
         
         hideAll();
         numPregunta++;

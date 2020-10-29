@@ -12,3 +12,15 @@ Marcas11 -
 Marcas12 - 
 Marcas13 - Mover objetos con el cursor
 Marcas14 - El juego de los números
+
+
+
+event.srcElement            // Obtener el elenemto
+
+event.srcElement.tagName            // Obtener el tipo de elemeto <a> <div>
+
+event.srcElement.innerHTML      // Obtener El contenido escrito
+
+evet.srcElement.getAtribute('id')        // Obtener el atributo de un elemento
+
+this.className = '';
