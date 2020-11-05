@@ -1,0 +1,27 @@
+img{
+    width: 300px;
+}
+
+#imagen1{
+    position: absolute;
+    top: 100px;
+    left: 700px;
+}
+
+#imagen2{
+    position: absolute;
+    top: 400px;
+    left: 1100px;
+}
+
+#imagen3{
+    position: absolute;
+    top: 700px;
+    left: 760px;
+}
+
+#imagen4{
+    position: absolute;
+    top: 400px;
+    left: 300px;
+}
