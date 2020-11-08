@@ -3,7 +3,26 @@ posYimg = new Array("700px", "1100px", "760px", "300px");
 
 let cont = 1;
 
+function startTimer() {
 
+    document.getElementById('startTimer').style.display = "none";
+    document.getElementById('rotar').style.display = "none";
+    document.getElementById('stopTimer').style.display = "";
+    
+    rotarInterval = setInterval(function() {
+        rotar();
+    }, 1000);
+
+}
+
+function stopTimer() {
+    
+    document.getElementById('startTimer').style.display = "";
+    document.getElementById('rotar').style.display = "";
+    document.getElementById('stopTimer').style.display = "none";
+    clearInterval(rotarInterval);
+
+}
 
 function rotar() {
 
@@ -12,16 +31,10 @@ function rotar() {
         let indexImagen = "imagen" + i;
         imagen = document.getElementById(indexImagen);
             
-            $(imagen).animate({ "top": posXimg[cont] }, "");
-            $(imagen).animate({ "left": posYimg[cont] }, "");
+        $(imagen).animate({ "top": posXimg[cont], "left": posYimg[cont] });
 
-            
-        
-        //imagen.style.top = posXimg[cont];
-        //imagen.style.left = posYimg[cont];
         cont++;
-            comprobarPos();
-
+        comprobarPos();
         
     }
 
@@ -35,7 +48,7 @@ function comprobarPos(){
     if (cont > 3) {
         
         cont = 0;
-        //clearInterval(pasarimagenes);
+
     }
 
 }
@@ -44,4 +57,5 @@ function prueba() {
     
     imggg = document.getElementById('imagen1');
     $(imggg).animate({ "left": "50px" }, "");
+
 }
