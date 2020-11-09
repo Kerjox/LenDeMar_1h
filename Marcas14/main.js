@@ -70,7 +70,6 @@ let numPregunta = 1;
 
 function pasarPreguntas(acierto) {
 
-    
     let tecla = event.key;
     console.log("Tecla pulsada " + "'" + tecla + "'");
     
@@ -79,14 +78,14 @@ function pasarPreguntas(acierto) {
         hideAll();
         numPregunta++;
         let pregunta = "pregunta" + numPregunta;
-        document.getElementById(pregunta).style.visibility = "";
+        document.getElementById(pregunta).style.display = "";
         
     }else if ((tecla == "a" || tecla == "A") && numPregunta != 1) {
         
         hideAll();
         numPregunta--
         let pregunta = "pregunta" + numPregunta;
-        document.getElementById(pregunta).style.visibility = "";
+        document.getElementById(pregunta).style.display = "";
         
     }
 
@@ -98,7 +97,7 @@ function hideAll() {
     
     for (let i = 1; i < 7; i++) {
         let objeto = "pregunta" + i;
-        document.getElementById(objeto).style.visibility = "hidden";        
+        document.getElementById(objeto).style.display = "none";        
         
     }
 

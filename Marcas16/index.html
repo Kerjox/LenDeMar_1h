@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <link href="../srcGlobal/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
+   
     <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="../srcGlobal/fontawesome-free-5.15.1-web/css/all.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcas15</title>
+    <title>Marcas16</title>
 </head>
-<body>
-    <img src="./src/img/1.jpg" alt="" id="imagen1">
-    <img src="./src/img/2.jpg" alt="" id="imagen2">
-    <img src="./src/img/3.jpg" alt="" id="imagen3">
-    <img src="./src/img/4.jpg" alt="" id="imagen4">
-    <button id="rotar" class="btn btn-primary" onclick="rotar(); //this.setAttribute('disabled', 0)">Rotar</button>
-    <button id="startTimer" class="btn btn-success" onclick="startTimer();"><i class="fas fa-play"></i> Start</button>
-    <button id="stopTimer" class="btn btn-danger" style="display: none;" onclick="stopTimer();"><i class="fas fa-stop"></i> Stop</button>
+<body onmousedown="cargarImagen();" onmousemove="mover();">
+
+    <button class="btn btn-primary" id="reset" onclick="location.reload()" style="display: none;"><i class="fas fa-redo-alt"></i> Reset</button>
+
+    <img src="./src/img/alcachofa.png" alt="" id="imagen1" class="fruta" style="left: 0px;">
+    <img src="./src/img/apple.png" alt="" id="imagen2" class="fruta" style="left: 100px;">
+    <img src="./src/img/melocoton.png" alt="" id="imagen3" class="fruta" style="left: 200px;">
+    <img src="./src/img/pera.png" alt="" id="imagen4" class="fruta" style="left: 300px;">
+
+    <img src="./src/img/trash_can.png" alt="" id="trash_can">
+    
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="main.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-<script src="main.js"></script>
 </body>
 </html>

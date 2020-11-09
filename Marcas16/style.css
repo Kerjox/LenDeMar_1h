@@ -1,0 +1,20 @@
+.fruta{
+    position: absolute;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+}
+
+#trash_can{
+    position: absolute;
+    bottom: 2%;
+    left: 40%;
+    width: 300px;
+    height: 300px;
+}
+
+#reset{
+    position: absolute;
+    top: 49%;
+    left: 48%;
+}
