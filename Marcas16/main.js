@@ -3,7 +3,7 @@ imagen = null;
 z = 5;
 let numberImages = 4;
 
-function mover(){
+window.addEventListener('mousemove', () => {
 
     if(imagen != null) {
 
@@ -13,7 +13,11 @@ function mover(){
 
     }
 
-}
+});
+
+    
+
+
 
 let selected = false;
 
@@ -24,22 +28,13 @@ function cargarImagen() {
         detectarColision();
         imagen = null;
         selected = false;
-        numberImages--;
-
-        if (numberImages == 0) {
-                        
-            document.getElementById('reset').style.display = "";
-
-        }
-
+        
     }else{
 
-        if (event.srcElement.tagName == "IMG" && event.srcElement.getAttribute('class') == "fruta") {
+        if (event.srcElement.tagName == "IMG" && (event.srcElement.className == "fruta" || event.srcElement.className == "cerilla")) {
             
             imagen = event.srcElement;
             selected = true;
-
-            
 
         }
 
@@ -59,9 +54,18 @@ function detectarColision() {
     if (X - x < 280 && Y - y < 30 && X - x > 0 && Y - y > -70) {
         
         console.log("Colisión");
-        imagen.style.display = "none";
 
-        
+        if (numberImages == 0 && imagen.className == "cerilla") {
+
+            imagen.style.display = "none";
+            trash_can.src = "./src/img/fuego.png";
+            reset.style.display = "";
+
+        }else if(numberImages > 0 && imagen.className != "cerilla"){
+
+            imagen.style.display = "none";
+            numberImages--;
+        }
 
     }
 
