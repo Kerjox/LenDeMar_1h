@@ -12,7 +12,12 @@ Marcas11 -
 Marcas12 - 
 Marcas13 - Mover objetos con el cursor
 Marcas14 - El juego de los números
-
+Marcas15 - 
+Marcas16 - 
+Marcas17 - 
+Marcas18 - Objeto Date()
+Marcas19 - Imagen de fondo que cambia con Date
+Marcas20 - Reloj digital
 
 
 event.srcElement            // Obtener el elenemto
