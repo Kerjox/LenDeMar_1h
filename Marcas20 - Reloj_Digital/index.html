@@ -8,13 +8,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marcas20 - Reloj</title>
 </head>
-<body onload="reloj()">
+<body>
     <h1 align="center">Reloj Digital</h1>
     <div id="caja-padre" align="center">
         <input type="text" id="caja" size="80">
     </div>
     
     <p id="reloj"></p>
+    <div style="display: block; margin: auto; width: 80%;">
+        <div class="progress">
+            <div class="progress-bar bg-danger" id="horaBar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="progress" >
+            <div class="progress-bar bg-info" id="minutoBar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar bg-success" id="segundoBar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="main.js"></script>

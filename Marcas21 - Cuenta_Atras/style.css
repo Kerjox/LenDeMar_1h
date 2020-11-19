@@ -1,0 +1,13 @@
+#caja-padre{
+    margin-top: 100px;
+}
+
+#caja{
+    text-align: center;
+}
+
+#reloj{
+    font-size: 50pt;
+    margin: auto;
+    text-align: center;
+}
