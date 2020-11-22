@@ -46,5 +46,6 @@ operar.addEventListener("click", () => {
 
     console.log("Boton presionado");
     operate();
+    //console.log(eval("32+1"));
 
 });
