@@ -26,6 +26,20 @@
             <div class="progress-bar bg-success" id="segundoBar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
     </div>
+    <br>
+    <div style="display: block; margin: auto; width: 50%;">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Horas" id="alarmHours">
+            <input type="text" class="form-control" placeholder="Minutos" id="alarmMinutes">
+            <div class="input-group-append">
+                <button class="btn btn-success" type="button" id="setAlarm">Set Alarm</button>
+            </div>
+        </div>
+    </div>
+
+    <div style="display: block; margin: auto; width: 30%;">
+        <img src="./src/img/despertador.png" style="display: none;" alt="Imagen de despertador" width="70%" id="despetador" onclick="this.style.display = 'none'" onmouseover="this.style.cursor = 'pointer'">
+    </div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
