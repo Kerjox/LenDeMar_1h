@@ -1,6 +1,6 @@
 
-imagen = null;
-z = 5;
+let imagen = null;
+let z = 5;
 let numberImages = 4;
 
 window.addEventListener('mousemove', () => {
@@ -21,28 +21,28 @@ window.addEventListener('mousemove', () => {
 
 let selected = false;
 
-function cargarImagen() {
+window.addEventListener("click", () => {
 
+        
     if (selected) {
-
+        
         detectarColision();
         imagen = null;
         selected = false;
         
     }else{
-
+        
         if (event.srcElement.tagName == "IMG" && (event.srcElement.className == "fruta" || event.srcElement.className == "cerilla")) {
             
             imagen = event.srcElement;
             selected = true;
-
+            
         }
-
+        
     }
-
-}
-
-
+    
+});
+    
 function detectarColision() {
     
     let X = imagen.x;
