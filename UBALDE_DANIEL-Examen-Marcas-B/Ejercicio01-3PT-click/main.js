@@ -23,11 +23,8 @@ window.addEventListener("click", () =>{
 
             selected = true;
         }
-        
+
     }
-
-
-    
 });
 
 window.addEventListener("mousemove", () =>{
@@ -45,8 +42,10 @@ function checkCollide() {
     let X = imagen.x;
     let Y = imagen.y;
 
-    let x = document.getElementById('hucha').x;
-    let y = document.getElementById('hucha').y;
+    let hucha = document.getElementById('hucha');
+
+    let x = hucha.x;
+    let y = hucha.y;
 
     if (X - x < 250 && Y - y < 30 && X - x > 50 && Y - y > -70) {
 
