@@ -1,7 +1,10 @@
 let selected = false;
 let z = 5;
-let contador = 0;
+let cont = 0;
 let imagen = null;
+let resetButton = document.getElementById('reset');
+let contador = document.getElementById('contador');
+let numImages = 5;
 
 window.addEventListener("click", () =>{
 
@@ -12,9 +15,9 @@ window.addEventListener("click", () =>{
 
     }else{
 
-        if (event.srcElement.className == "moneda" || event.srcElement.className == "billete") {
+        if (event.srcElement.className == "moneda" || event.srcElement.className == "billete10" || event.srcElement.className == "billete50") {
 
-            console.log(event.srcElement.className);
+            //console.log(event.srcElement.className);
         
             imagen = event.srcElement;
 
@@ -45,21 +48,32 @@ function checkCollide() {
     let x = document.getElementById('hucha').x;
     let y = document.getElementById('hucha').y;
 
-    if (X - x < 280 && Y - y < 30 && X - x > 0 && Y - y > -70) {
+    if (X - x < 250 && Y - y < 30 && X - x > 50 && Y - y > -70) {
 
         switch (imagen.className) {
             case "moneda":
-                contador += 1;
+                cont += 1;
                 break;
         
-            case "billete":
-                contador += 10;
+            case "billete10":
+                cont += 10;
+                break;
+            case "billete50":
+                cont += 50;
                 break;
         }
 
         imagen.style.display = "none";
 
-        document.getElementById('contador').innerHTML = contador + "€";
+        contador.innerHTML = cont + "€";
+
+        if (--numImages == 0) resetButton.style.display = "";
 
     }
 }
+
+resetButton.addEventListener('click', () => {
+
+    location.reload();
+
+});

@@ -20,7 +20,7 @@ function switchSemaforo() {
             break;
         case 2:
             hideAll();
-            amarillo.setAttribute("bgcolor", "yellow");
+            amarillo.setAttribute("bgcolor", "orange");
             posSemaforo = 3;
             setTimeout(() => {switchSemaforo()}, 2000);
             break;
@@ -40,8 +40,8 @@ function switchSemaforo() {
 
 function hideAll() {
     
-    verde.setAttribute("bgcolor", "");
-    amarillo.setAttribute("bgcolor", "");
-    rojo.setAttribute("bgcolor", "");
+    verde.setAttribute("bgcolor", "50380a");
+    amarillo.setAttribute("bgcolor", "50380a");
+    rojo.setAttribute("bgcolor", "50380a");
 
 }
