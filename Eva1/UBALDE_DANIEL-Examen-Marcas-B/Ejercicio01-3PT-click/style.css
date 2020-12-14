@@ -1,0 +1,42 @@
+.moneda{
+    position: absolute;
+    top: 0px;
+    width: 100px;
+    height: 100px;
+}
+
+
+.billete10{
+    position: absolute;
+    top: 0px;
+    width: 300px;
+    height: 100px;
+}
+
+.billete50{
+    position: absolute;
+    top: 0px;
+    width: 300px;
+    height: 100px;
+}
+
+.hucha{
+    position: absolute;
+    width: 400px;
+    display: block;
+    margin-left: 40%;
+    bottom: 0px;
+}
+
+.contador{
+    position: relative;
+    font-size: 50pt;
+    top: 50%;
+    margin-top: 300px;
+}
+
+#reset{
+    position: absolute;
+    top: 49%;
+    left: 48%;
+}

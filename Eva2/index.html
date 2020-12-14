@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="button" id="mover" value="Mover">
+    <div id="rectangulo" style="padding: 30px 30px 30px 300px; background-color: aqua;"></div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    
+    $(document).ready(function () {
+        console.log("Cargado");
+
+        $("#mover").click(function () {
+            $("#rectangulo").slideUp(4000);
+
+        });
+    });
+</script>
+</body>
+</html>
