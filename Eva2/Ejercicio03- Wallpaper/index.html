@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallpaper</title>
+</head>
+<body background="./src/wallpaper.jpeg">
+
+    <input type="button" id="up" value="Up">
+    <input type="button" id="down" value="Down">
+    <input type="button" id="right" value="Right">
+    <input type="button" id="left" value="Left">
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $("#up").click(function (e) { 
+        //console.log("¡Vamos a Marte!");
+        $("body").animate({"backgroundPositionY":"0%"}, 10000);      
+    });
+
+    $("#down").click(function (e) { 
+        //console.log("¡Vamos a Marte!");
+        $("body").animate({"backgroundPositionY":"1000%"}, 10000);      
+    });
+
+    $("#right").click(function (e) { 
+        //console.log("¡Vamos a Marte!");
+        $("body").animate({"backgroundPositionX":"1000%", "backgroundPositionY":"1000%"}, 10000, "swings");      
+    });
+
+    $("#left").click(function (e) { 
+        //console.log("¡Vamos a Marte!");
+        $("body").animate({"backgroundPositionX":"0%"}, 10000);
+    });
+
+</script>
+</body>
+
+</html>

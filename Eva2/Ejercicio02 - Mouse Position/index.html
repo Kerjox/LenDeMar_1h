@@ -11,6 +11,9 @@
     <div id="texto2"></div>
     <div id="texto3"></div>
     <div id="texto4"></div>
+    <div id="texto5"></div>
+    <div id="texto6"></div>
+    <div id="texto7"></div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
@@ -22,6 +25,17 @@
         $("#texto2").text("bienvenidos");
         $("#texto3").text("hijos del rock and roll");
         $("#texto4").text("les saludan los aliados de la noche");
+        $("#texto5").html("<input type='button' value='Botón'>");
+    });
+
+    $(document).mousemove(function (e) {
+    
+        $("#texto6").text(e.clientX + " - " + e.clientY);
+    });
+
+    $(document).mousemove(function (e) {
+    
+        $("#texto7").text(e.pageX + " - " + e.pageY);
     });
 
 </script>
