@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Function</title>
+</head>
+<body>
+    
+    <input type="button" id="button-hide" value="Hide">
+    <input type="button" id="button-show" value="Show">
+    <input type="button" id="button-hide-mesage" value="Hide-M">
+    <input type="button" id="button-show-mesage" value="Show-M">
+    <input type="button" id="button-animation" value="Animation">
+    <input type="button" id="button-toggle" value="Toggle">
+    <div id="rectangulo" style="padding: 30px 30px 30px 300px; background-color: aqua;"></div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script>
+    
+    $(document).ready(function () {
+
+        console.log("Cargado"); 
+    });
+
+    $("#button-hide").click(function () {
+    
+        $("#rectangulo").slideUp(2000);
+
+    });
+
+    $("#button-show").click(function () {
+    
+        $("#rectangulo").slideDown(1000);
+
+    });
+
+    $("#button-hide-mesage").click(function () {
+    
+        $("#rectangulo").slideUp(2000, function () {
+
+            alert("Escondido");
+            
+        });
+
+    });
+
+    $("#button-show-mesage").click(function () {
+
+        $("#rectangulo").slideDown(1000, function () {
+            
+            alert("Mostrado");
+
+        });
+
+    });
+
+    $("#button-animation").click(function () {
+
+        $("#rectangulo").slideUp(1000, function () {
+            
+            alert("Escondido");
+
+            $("#rectangulo").slideDown(2000, function () {
+                
+                alert("Mostrado");
+
+            });
+
+
+        });
+
+    });
+
+    $("#button-toggle").click(function () {
+
+        $("#rectangulo").slideToggle(2000);
+
+    });
+
+</script>
+</body>
+</html>
