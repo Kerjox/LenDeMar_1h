@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borde Animado</title>
+</head>
+<body>
+
+    <span id="span" style="position: absolute; outline: 1px solid black; margin-top: 20px; margin-left: 30px;">En un lugar de la mancha</span>
+    <br><br><br><br>
+    <input id="ampliar1" type="button" value="Ampliar marco">
+    <input id="ampliar2" type="button" value="Ampliar marco lento">
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    
+    $("#ampliar1").click(function (e) {
+
+        $("#span").animate({"outlineWidth":"10px"});
+        
+    });
+
+    $("#ampliar2").click(function (e) { 
+        
+        $("#span").animate({"outlineWidth":"10px"}, 5000);
+        
+    });
+
+</script>
+</body>
+
+</html>
