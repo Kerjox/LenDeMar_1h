@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio05 - Grupos de objetos a</title>
+</head>
+<body>
+    <a href="google.es">Google</a>
+    <br>
+    <a href="reddit.com">Reddit</a>
+    <br>
+    <a href="docker.com">Docker</a>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    
+    let doc = $(document);
+    doc.ready(init);
+
+    function init() {
+
+        let allAtags = $("a");
+        allAtags.mouseover(entrarMouse);
+        allAtags.mouseout(salirMouse);
+        console.log("Inicializado");
+    }
+
+    function entrarMouse() {
+        //alert(this);
+        $(this).css("background-color", "red")
+    }
+
+    function salirMouse() {
+        $(this).css("background-color", "white");
+    }
+
+</script>
+</body>
+
+</html>
