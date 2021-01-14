@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio09 - Animaciones2</title>
+</head>
+<body>
+    
+    <div id="rectangulo" style="position: absolute;">Feliz Año</div>
+    <input type="button" style="position: absolute; margin-top: 50px;" id="button-width" value="Do Thinghs">
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script>
+        
+    $("#button-width").click(function (e) {
+
+        $("#rectangulo").animate({left: "80%"}, 2000);
+        $("#rectangulo").animate({fontSize: "40pt"}, 2000);
+    });
+
+</script>
+</body>
+</html>

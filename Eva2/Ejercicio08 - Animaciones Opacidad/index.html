@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio08 - Animaciones Opacidad</title>
+</head>
+<body>
+    
+    <div id="rectangulo" style="width: 100px; height: 10px; background-color: aqua; position: absolute;"></div>
+    <input type="button" id="button-width" value="Hacer Grande">
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script>
+        
+    $("#button-width").click(function (e) {
+        $("#rectangulo").animate({height: "50px", width: "200px", opacity: "0.4"}, 2000);
+        $("#rectangulo").animate({height: "880px", width: "600px", opacity: "0.2"}, 2000);
+        $("#rectangulo").animate({height: "333px", width: "280px", opacity: "0.8"}, 2000);
+        $("#rectangulo").animate({height: "10px", width: "100px", opacity: "1"}, 2000);
+    });
+
+</script>
+</body>
+</html>
