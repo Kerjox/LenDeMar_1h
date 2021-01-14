@@ -6,7 +6,27 @@
     <title>Ejercicio06</title>
 </head>
 <style>
-    .divScroll{
+    #divCoordenadas{
+
+        border: solid 1px black;
+        border-radius: 5px;
+        padding: 10px;
+        width: 200px;
+        text-align: center;
+        box-shadow: 1px 1px 10px black;
+        float: left;
+    }
+
+    #divEstado{
+
+        padding: 10px;
+        width: 200px;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 1px 1px 10px black;
+        float: right;
+    }
+    #divScroll{
         margin: 20px;
         padding: 10px;
         height: 100px;
@@ -17,7 +37,9 @@
     }
 </style>
 <body>
-    <div class="divScroll">
+    <div id="divCoordenadas"></div>
+    <div id="divEstado"></div>
+    <div id="divScroll">
 
         <p>Indicarse resonaban sin reconocio complacia tio sea tormentos irascible. Esclavo glorias voz oro agujero tufillo muy ano encogia. El os brillaron indicarse se guardando. Negarle era dos hay luz varonil estarlo. Yo percal huecos la armino. Han ese contribuia partituras censuraban hoy. Proposito prolifica expresion yo ocupacion el un continuar declaraba. Zamora lumbre afines ma segura sonrie genero la he. Extraneza ocupacion ano cabellera por mar las proscenio. </p>
         <p>Verguenza un vagamente arrogante declaraba abundaban sr peligrosa. Contrariar despertaba fue amabilidad orgullosos ese hoy doy. Crespo era ensayo sin dio fijeza region. Es de visita tendre oh gastos ajenas dulces. Plegarse rociaban un seductor ir lo. Bajo ocho si da en boga hago edad azul. </p>
@@ -32,6 +54,29 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
 <script>
+
+    /* $(document).mousemove(function (e) {
+
+        $("#divCoordenadas").text("x:" + e.pageX + " - y:" + e.pageY);    
+    }); */
+
+    $(document).on("mousemove", function (e) {
+
+        $("#divCoordenadas").html("<strong>x:" + e.pageX + " - y:" + e.pageY + "</strong>");
+    });
+
+    $(document).contextmenu(function (e) {
+        e.preventDefault();
+        $("#divEstado").html("<strong>Click derecho</strong>");
+    });
+
+    $(document).click(function (e) {
+        $("#divEstado").html("<strong>Click izquierdo</strong>");
+    });
+
+    $("#divScroll").scroll(function (e) {
+        $("#divEstado").html("<strong>Scroll detectado</strong>");
+    });
 
 </script>
 
