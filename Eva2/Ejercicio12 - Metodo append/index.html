@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio12 - Metodo append</title>
+</head>
+<style>
+    .boton{
+
+    }
+</style>
+<body>
+    <div id="divAsistente1"></div>
+    <div id="divAsistente2"></div>
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+        
+        $("#divAsistente1").append($("<input>").attr("class","boton").attr("type", "button").attr("value", "Hola"));
+        $("#divAsistente2").append($("<button>").attr("class","boton").text("asdfas"));
+    });
+    
+</script>
+</html>

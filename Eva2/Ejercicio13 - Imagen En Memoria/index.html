@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio13 - Imagen En Memoria</title>
+</head>
+<body>
+    <input type="button" id="boton" value="Añadir">
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+
+    let imagen = $("<img>", {src:"./src/wallpaper.jpeg", id:"imagen", css:{"padding":"2px", "cursor":"pointer"}, 
+    click:function (e) {document.location="../Ejercicio12 - Metodo append/index.html";}});
+
+    $("#boton").click(function () {
+        
+        $("body").append(imagen);
+    });
+</script>
+</html>

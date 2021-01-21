@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio14 - Presionador de Teclas</title>
+</head>
+<body>
+    <p>
+        <input type="text" id="escribe">
+    </p>
+    <p id="parrafo">
+
+    </p>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+
+    $("#escribe").keypress(function (event) {
+
+        $("#parrafo").text("Techa pulsada: " + event.key);
+        $("#parrafo").append("<br>");
+        $("#parrafo").append("El código: " + event.keyCode);
+        $("#escribe").val("");
+    });
+</script>
+</html>
