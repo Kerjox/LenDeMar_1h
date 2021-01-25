@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio18 - Transición3</title>
+</head>
+
+<style>
+
+    .primero, .segundo {
+        
+        display: none;
+        padding: 5px;
+        border: 1px solid springgreen;
+        background-color: rgba(65, 65, 65, 0.2);
+    }
+
+    #li-primero:hover .primero{
+
+        display: block;
+    }
+
+    #li-segundo:hover .segundo{
+
+        display: block;
+    }
+
+    #li-segundo {
+
+        position: absolute;
+        top: 100px;
+    }
+</style>
+<body>
+    <ol>
+        <li id="li-primero">Mostrar primer DIV
+            <div class="primero">Contenido del primer div</div>
+        </li>
+        <li id="li-segundo">Mostrar segundo DIV
+            <div class="segundo">Contenido del segundo div</div>
+        </li>
+    </ol>
+</body>
+</html>
