@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio19 - show-hide</title>
+</head>
+<body>
+    <input type="button" id="boton" value="Aparecer y desaparecer">
+    <img src="./src/imagen.svg" alt="" class="imagen">
+    <br><br><br>
+    <input type="button" id="mostrarElementos" value="Mostrar elementos">
+    <br><br><br>
+    <input type="button" id="ocultarElementos" value="Ocultar elementos">
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script>
+    $(document).ready(function(e) {
+
+        console.log("Patata");
+    });
+
+    $("#mostrarElementos").click(function (e) {
+        
+        $("#boton").show(4000);
+        $(".imagen").show(4000);
+    });
+
+    $("#ocultarElementos").click(function (e) {
+        
+        $("#boton").hide(4000);
+        $(".imagen").hide(4000);
+    });
+</script>
+</html>
