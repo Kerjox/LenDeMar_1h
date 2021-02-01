@@ -1,0 +1,10 @@
+ul.tabs{
+
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    width: 600px;
+    height: 32px;
+    margin-top: -7px;
+}

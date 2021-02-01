@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio20 - Estilos Persiana</title>
+</head>
+<body>
+    <input type="button" id="boton" value="Empezar">
+    <div id="persiana">Bienvenido al aula 1H</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script>
+    $(document).ready(function(e) {
+
+        console.log("Patata");
+        $("#persiana").css({
+            width: "200px",
+            height: "15px",
+            backgroundColor: "aqua",
+            borderStyle: "solid",
+            borderWidth: "3px",
+            fontFamily: "Verdana",
+            padding: "20px",
+            fontSize: "12px",
+            textAlign: "center",
+            color: "red"
+        });
+    });
+
+    $("#boton").click(function (event) {
+        
+        $("#persiana").slideUp(3000, function (event) {
+            
+            $("#persiana").slideDown(3000);
+        });
+    });
+</script>
+</html>
