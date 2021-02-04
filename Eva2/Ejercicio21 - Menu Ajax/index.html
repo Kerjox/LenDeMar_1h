@@ -11,13 +11,39 @@
         <tr>
             <td>
                 <ul class="tabs">
-                    <li>Menu 1</li>
-                    <li>Menu 2</li>
-                    <li>Menu 3</li>
-                    <li>Menu 4</li>
+                    <li><a href="#tab1">Menu 1</a></li>
+                    <li><a href="#tab2">Menu 2</a></li>
+                    <li><a href="#tab3">Menu 3</a></li>
+                    <li><a href="#tab4">Menu 4</a></li>
                 </ul>
+                <div class="container">
+                    <div id="tab1">
+                        Cosa1
+                    </div>
+                    <div id="tab2">
+                        Cosa2
+                    </div>
+                    <div id="tab3">
+                        Cosa3
+                    </div>
+                    <div id="tab4">
+                        Cosa4
+                    </div>
+                </div>
             </td>
         </tr>
     </table>
 </body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    //$(".contenedor div")      // Solo los objetos del contenedor que son div pero no al contenedor
+    $(".container div").hide();
+    $(".container div:first").show();
+    $(".tabs li a:first").addClass("activa");
+
+    $(".tabs li").click(function (e) {
+        $(".tabs li a").removeClass();
+        $(this).addClass("activa");
+    });
+</script>
 </html>

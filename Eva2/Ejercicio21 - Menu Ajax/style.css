@@ -1,10 +1,53 @@
 ul.tabs{
-
     float: left;
-    margin: 0px;
-    padding: 0px;
+    margin: 0%;
+    padding: 0%;
     list-style: none;
     width: 600px;
     height: 32px;
     margin-top: -7px;
+}
+
+ul.tabs li{
+    float: left;
+    margin: 0%;
+    padding: 0%;
+    height: 31px;
+    line-height: 31px;
+    border: 1px solid #333;
+    margin-bottom: -1;
+    background: #333;
+    overflow: hidden;
+    position: relative;
+    border-radius: 7px 7px 0px 0px;
+}
+
+ul.tabs li a{
+    color: azure;
+    text-decoration: none;
+    display: block;
+    font-size: 13px;
+    padding: 0px 20px;
+}
+
+ul.tabs li a:hover{
+    background-color: #666;
+}
+
+.container{
+    float: left;
+    clear: both;
+    width: 600px;
+    height: 500px;
+    display: block;
+    border: 1px solid #333;
+    border-radius: 0px 7px 7px 7px;
+    background: linear-gradient(white, gray);
+}
+
+.activa{
+    color: #333;
+    font-weight: bold;
+    background-color: #ccc;
+    border-bottom: 1px solid #ccc;
 }
