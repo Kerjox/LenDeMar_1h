@@ -41,7 +41,8 @@
     $(".container div:first").show();
     $(".tabs li a:first").addClass("activa");
 
-    $(".tabs li").click(function (e) {
+    $(".tabs li a").click(function (e) {
+
         $(".tabs li a").removeClass();
         $(this).addClass("activa");
     });
