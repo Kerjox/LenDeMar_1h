@@ -1,0 +1,20 @@
+img {
+    width: 600px;
+    height: 400px;
+}
+
+li {
+    float: left;
+    list-style: none;
+}
+
+ul, li {
+    padding: 0px;
+    margin: 0px;
+}
+
+ul {
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+}

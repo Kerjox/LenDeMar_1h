@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Ejercicio22 - Galeria Imagenes</title>
+</head>
+<body>
+    <ul id="galeria">
+        <li><img src="./src/1.jpg" alt=""></li>
+        <li><img src="./src/2.jpg" alt=""></li>
+        <li><img src="./src/3.jpg" alt=""></li>
+        <li><img src="./src/4.jpg" alt=""></li>
+    </ul>
+    
+    <button type="button" class="btn btn-primary" id="anterior">Anterior</button>
+    <button type="button" class="btn btn-primary" id="siguiente">Siguiente</button>
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $("#siguiente").click(function (e) {
+        $("#galeria li:first").appendTo("#galeria:first");
+    });
+
+    $("#anterior").click(function (e) {
+        $("#galeria li:last").prependTo("#galeria:last");
+    });
+</script>
+</html>

@@ -45,6 +45,10 @@
 
         $(".tabs li a").removeClass();
         $(this).addClass("activa");
+        $(".container div").hide();
+        let parrafo = $(this).attr("href");
+        $(parrafo).show();
+        // $(this).find("a").attr("href");
     });
 </script>
 </html>
