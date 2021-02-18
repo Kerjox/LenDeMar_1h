@@ -1,0 +1,50 @@
+li {
+    list-style: none;
+    padding: 0px;
+    text-align: center;
+}
+
+.menu {
+    width: 200px;
+
+}
+
+.menu>li {
+    background-color: aquamarine;
+    border: 1px outset black;
+    padding: 5px;
+    position: relative;
+}
+
+.subMenu{
+    position: absolute;
+    top: 0px;
+    left: 199px;
+    display: none;
+    transition: all 1.5s ease;
+}
+
+.subMenu>li{
+    background-color: blue;
+    border: 1px outset blue;
+    width: 180px;
+    padding: 20px;
+}
+
+.menu>li:hover .subMenu {
+
+    display: block;
+}
+
+.menu>li:hover {
+    background-color: chocolate;
+    color: white;
+    cursor: pointer;
+}
+
+    width: 100p;
+    .subMenu>li:hover {
+    background-color: chocolate;
+    color: white;
+    cursor: pointer;
+}
