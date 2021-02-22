@@ -42,8 +42,8 @@ li {
     cursor: pointer;
 }
 
-    width: 100p;
-    .subMenu>li:hover {
+.subMenu>li:hover {
+    width: 100px;
     background-color: chocolate;
     color: white;
     cursor: pointer;
