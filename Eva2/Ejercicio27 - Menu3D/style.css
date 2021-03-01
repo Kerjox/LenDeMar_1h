@@ -42,6 +42,8 @@ ul {
     padding-top: 100px;
     position: relative;
     top: -250px;
+    transition: all ease 2s;
+    transform-style: preserve-3d;
 }
 
 .panel:hover {
@@ -51,7 +53,7 @@ ul {
 
 .front>i {
 
-    margin-bottom: 50px;
+    margin-bottom: 125px;
 
 }
 
@@ -64,6 +66,7 @@ ul {
 
     position: absolute;
     top: 20px;
+    transform: rotateY(180deg) translateZ(100px);
 }
 
 .back>ul>li {
@@ -73,6 +76,23 @@ ul {
     margin-top: 30px;
     padding: 5px;
     box-shadow: 0px 0px 3px #136C60 inset;
+    user-select: none;
+}
+
+.back>ul>li:hover {
+
+    transform: scale(1.2);
+    cursor: pointer;
+    box-shadow: 0px 5px 0px hsl(171, 53%, 42%), 0px 10px 10px #000, 0px 0px 3px #136C60 inset;
+    border-radius: 3px;
+}
+
+.back>ul>li:active {
+
+    transform: scale(1.2) translateY(3px);
+    cursor: pointer;
+    box-shadow: 0px 3px 0px hsl(171, 53%, 42%), 0px 10px 10px #000, 0px 0px 3px #136C60 inset;
+    border-radius: 3px;
 }
 
 @keyframes animacion {

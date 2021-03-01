@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../lib/jquery-ui/jquery-ui.min.css">
+    <title>Ejercicio28 - Draggable</title>
+    <style>
+        img {
+            width: 100px;
+            float: left;
+        }
+
+        .dibujo {
+
+            position: absolute;
+        }
+
+        #bin2 {
+            
+            left: 120px;
+        }
+        #bin3 {
+
+            left: 240px;
+        }
+        #bin4 {
+
+            left: 360px;
+        }
+        #bin5 {
+
+            left: 480px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="bin1" class="dibujo"><img src="./src/bin.png" alt="bin1"></div>
+    <div id="bin2" class="dibujo"><img src="./src/bin.png" alt="bin2"></div>
+    <div id="bin3" class="dibujo"><img src="./src/bin.png" alt="bin3"></div>
+    <div id="bin4" class="dibujo"><img src="./src/bin.png" alt="bin4"></div>
+    <div id="bin5" class="dibujo"><img src="./src/bin.png" alt="bin5"></div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="../lib/jquery-ui/jquery-ui.min.js"></script>
+<script>
+
+    $(".dibujo").draggable();
+</script>
+</html>
