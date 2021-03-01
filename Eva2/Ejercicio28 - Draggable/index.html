@@ -48,6 +48,21 @@
 <script src="../lib/jquery-ui/jquery-ui.min.js"></script>
 <script>
 
-    $(".dibujo").draggable();
+    let topP = 0;
+    let left = 0;
+
+    $(".dibujo").draggable({
+        start:function(e, ui) {
+
+            topP = ui.position.top;
+            left = ui.position.left;
+        },
+
+        stop:function(e) {
+
+            this.style.top = topP;
+            this.style.left = left;
+        }
+    });
 </script>
 </html>
