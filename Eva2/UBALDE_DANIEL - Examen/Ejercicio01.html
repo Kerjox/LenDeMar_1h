@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio01</title>
+</head>
+<body>
+    <div id="imagen"></div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+
+$(document).on("contextmenu", function(e){
+        
+    return false;
+});
+
+
+let imagen = $("<img>", {src:"./img/0.png"});
+let imagen2 = $("<img>", {src:"./img/1.png"});
+
+$(document).mousedown(function (e) {
+    
+    if (e.which == 3) {         // Click izquierdo
+
+        $("#imagen").append(imagen);
+    }else if (e.which == 1){        // Click derecho
+
+        $("#imagen").append(imagen2);       
+    }
+
+});
+</script>
+</body>
+</html>

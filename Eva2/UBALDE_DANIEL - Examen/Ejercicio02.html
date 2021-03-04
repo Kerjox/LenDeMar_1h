@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio02</title>
+</head>
+<style>
+    #text {
+        opacity: 0;
+        font-size: 5pt;
+    }
+</style>
+<body>
+    <p id="text">Hola alcachofa escachuflada</p>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+
+    function animacion() {
+        
+        $("#text").animate({fontSize: "25pt", opacity: 1}, 5000, function (e) {
+                
+                $("#text").animate({fontSize: "5pt", opacity: 0}, 5000);
+        });
+    }
+
+    $(document).keydown(function (e) {
+        console.log(e.keyCode);
+
+        if (e.keyCode = 65) {
+            
+            animacion();
+            setInterval(animacion, 10000);
+        }
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio03</title>
+</head>
+<style>
+    .normal{
+        opacity: 0.5;
+        width: 200px;
+        height: 200px;
+        float: left;
+        transform: rotateY(180deg);
+    }
+
+    .activa {
+
+        width: 200px;
+        height: 200px;
+        float: left;
+    }
+
+    .list {
+        list-style: none;
+    }
+</style>
+<body>
+    <div>
+        <ul class="list">
+            <li><img src="./img/0.png" alt=""></li>
+            <li><img src="./img/1.png" alt=""></li>
+            <li><img src="./img/2.jpg" alt=""></li>
+            <li><img src="./img/3.jpg" alt=""></li>
+        </ul>
+    </div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    
+    $(".list li img").addClass("normal");
+
+    $(".list li img").click(function (e) {
+        
+        $(".list li img").addClass("normal");
+        $(this).removeClass().addClass("activa");
+    });
+
+</script>
+</body>
+</html>
