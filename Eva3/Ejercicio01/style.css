@@ -1,0 +1,12 @@
+form {
+
+    background-color: aqua;
+    margin: auto;
+    width: 400px;
+    padding: 10px 100px 20px 100px;
+}
+
+h2 {
+    text-align: center;
+    text-decoration: underline;
+}
