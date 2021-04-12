@@ -27,7 +27,7 @@
 #buttons {
     margin: 10px auto;
     padding: 12px;
-    background: violet;
+    background: #848484;
     border-radius: 20px;
 }
 
@@ -36,4 +36,9 @@
     height: 25px;
     border: 2px solid black;
     cursor: pointer;
+}
+
+.button:hover {
+
+    margin-bottom: -3px;
 }

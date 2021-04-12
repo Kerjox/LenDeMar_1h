@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canva03</title>
+</head>
+<body>
+    
+    <canvas id="canvas" width="150px" height="150px"></canvas>
+    <script>
+
+        let ctx = canvas.getContext("2d");
+        ctx.beginPath();
+        ctx.moveTo(25, 25);
+        ctx.lineTo(105, 25);
+        ctx.lineTo(25, 105);
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(105, 105);
+        ctx.lineTo(25, 105);
+        ctx.lineTo(105, 25);
+        ctx.closePath();
+        ctx.fill();
+    </script>
+</body>
+</html>
