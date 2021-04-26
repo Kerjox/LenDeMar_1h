@@ -3,6 +3,7 @@ const ss = sessionStorage;
 const productsCart = doc.querySelector("#productsCart");
 const totalImport = doc.querySelector("#totalImport");
 const content = doc.querySelector("#content");
+let productCart;
 
 
 window.onload = function () {
@@ -22,12 +23,8 @@ $("table button").click(function (e) {
 
         ss.setItem(id, 1);
     }
-    showCart();
-});
 
-$("#productsCart").click(function (e) {
-    
-    console.log("GGGGG");
+    showCart();
 });
 
 function calcTotalProducts(e) {
@@ -55,13 +52,20 @@ function showCart() {
 
         productsCart.innerHTML = "Vacio";
         totalImport.innerHTML = "";
+        
     } else {
 
         productsCart.innerHTML = "";
         
         for (let i = 0; i < ss.length; i++) {
+            /*
+            <div id="productCart">
+                <div>Name</div>
+                <button id="aa" class="remove">X</button>
+            </div>
+            */
             
-            productsCart.innerHTML += "Procducto: " + ss.key(i) + " ; Cantidad: " + ss.getItem(ss.key(i)) + "<button id=" + ss.key(i) + ">X</button>" + "<br>";
+            $("#productsCart").html("<div id='productCart'><div> Procducto: " + ss.key(i) + " ; Cantidad: " + ss.getItem(ss.key(i)) + "</div><button id='" + ss.key(i) + "' onclick='removeItem(" + ss.key(i) + ")'>X</button></div>");
         }
         calcTotalProducts();
     }
@@ -69,7 +73,21 @@ function showCart() {
 
 }
 
+function removeItem(key) {
+    
+    let item = key.id;
+    let value = parseInt(ss.getItem(item));
+    value--;
 
+    if (value > 0) {
+        
+        ss.setItem(item, value);
+    } else {
+        ss.removeItem(item);
+    }
+
+    showCart();
+}
 
 function mostrar() {
     
