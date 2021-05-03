@@ -3,8 +3,8 @@ const ss = sessionStorage;
 const productsCart = doc.querySelector("#productsCart");
 const totalImport = doc.querySelector("#totalImport");
 const content = doc.querySelector("#content");
-let productCart;
-
+const reset = doc.querySelector("#reset");
+const botonTabla = doc.querySelector("table button");
 
 window.onload = function () {
     
@@ -40,11 +40,11 @@ function calcTotalProducts(e) {
     totalImport.innerHTML += totalProducts;
 }
 
-$("#reset").click(function (e) {
+reset.onclick = function (e) {
     
     ss.clear();
     showCart();
-});
+}
 
 function showCart() {
     
@@ -55,18 +55,18 @@ function showCart() {
         
     } else {
 
-        productsCart.innerHTML = "";
+        let tablaProductos = "<table border=\"1\" class=\"cartProducts\">";
+        tablaProductos += "<tr><th>Nombre</th><th>Cantidad</th><th>Borrar</th></tr>";
         
         for (let i = 0; i < ss.length; i++) {
-            /*
-            <div id="productCart">
-                <div>Name</div>
-                <button id="aa" class="remove">X</button>
-            </div>
-            */
             
-            $("#productsCart").html("<div id='productCart'><div> Procducto: " + ss.key(i) + " ; Cantidad: " + ss.getItem(ss.key(i)) + "</div><button id='" + ss.key(i) + "' onclick='removeItem(" + ss.key(i) + ")'>X</button></div>");
+            tablaProductos += "<tr>";
+            tablaProductos += "<td cellpadding=\"20\">" + ss.key(i) + "</td><td>" + ss.getItem(ss.key(i)) + "</td><td><button id=\"" + ss.key(i) + "\" onclick=\"removeItem(" + ss.key(i) + ")\">X</button></td>";
+            tablaProductos += "</tr>";
         }
+
+        tablaProductos += "</table>";
+        productsCart.innerHTML = tablaProductos;
         calcTotalProducts();
     }
 
