@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertar tabla SQLite</title>
+</head>
+<body onload="load();">
+    
+
+    <script>
+        function load(){
+            var db = openDatabase("MyDB", "1.0", "blabla", 2 * 1024 * 1024); //openDatabase("nombreBBDD", "1.0", "comentario", memoria)
+            db.transaction(function(tx){
+                tx.executeSql("CREATE TABLE IF NOT EXISTS DATOS(codigo unique, nombre)");
+                tx.executeSql("INSERT INTO DATOS (codigo, nombre) VALUES(1, 'Pepe')");
+                tx.executeSql("INSERT INTO DATOS (codigo, nombre) VALUES(2, 'Juan')");
+            });
+        }
+    </script>
+</body>
+</html>
