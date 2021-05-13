@@ -9,15 +9,17 @@
 <body onload="load();">
     
 
-    <script>
-        function load(){
-            var db = openDatabase("MyDB", "1.0", "blabla", 2 * 1024 * 1024); //openDatabase("nombreBBDD", "1.0", "comentario", memoria)
-            db.transaction(function(tx){
-                tx.executeSql("CREATE TABLE IF NOT EXISTS DATOS(codigo unique, nombre)");
-                tx.executeSql("INSERT INTO DATOS (codigo, nombre) VALUES(1, 'Pepe')");
-                tx.executeSql("INSERT INTO DATOS (codigo, nombre) VALUES(2, 'Juan')");
-            });
-        }
-    </script>
+<script>
+    function load(){
+        
+        let db = openDatabase("database_datos", "1.0", "Comentario", 2 * 1024 * 1024); //openDatabase("nombreBBDD", "1.0", "comentario", memoria)
+        db.transaction(function(tx){
+            tx.executeSql("DROP TABLE IF EXISTS datos;");
+            tx.executeSql("CREATE TABLE datos(id UNIQUE NOT NULL, nombre);");
+            tx.executeSql("INSERT INTO datos (id, nombre) VALUES(1, 'Pepe');");
+            tx.executeSql("INSERT INTO datos (id, nombre) VALUES(2, 'Juan');");
+        });
+    }
+</script>
 </body>
 </html>

@@ -4,7 +4,7 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
+     <title>Read Cart</title>
 </head>
 <body onload="read();">
 
@@ -13,7 +13,7 @@
 <script>
      function read() {
 
-          var db = openDatabase("database_datos", "1.0", "Comentario", 2 * 1024 *1024);
+          var db = openDatabase("carrito_data", "1.0", "Comentario", 2 * 1024 *1024);
 
           db.transaction(function(tx){
 
@@ -25,7 +25,7 @@
                     for(i = 0; i < len; i++){
                          
                          console.log(resultados.rows);
-                         msg += "<p><b>" + resultados.rows.item(i).id + "</b> - " + resultados.rows.item(i).nombre + "</p>";
+                         msg += "<p><b>" + resultados.rows.item(i).nombre + "</b> - " + resultados.rows.item(i).cantidad + "</p>";
                     }
 
                     estado.innerHTML = msg;
