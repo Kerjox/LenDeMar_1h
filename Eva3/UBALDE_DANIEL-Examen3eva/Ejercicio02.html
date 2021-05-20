@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio02</title>
+</head>
+<body>
+    
+    <div id="datosSS"></div>
+    <canvas id="canvas" width="200px" height="200px"></canvas>
+    <button id="mostrarCanva">Mostrar</button>
+
+
+
+    <script>
+
+        const doc = document;
+        const ss = sessionStorage;
+        const datosSS = doc.querySelector("#datosSS");
+        const canvas = doc.querySelector("#canvas");
+        const button = doc.querySelector("#mostrarCanva");
+
+        window.onload = function () {
+
+            ss.clear();
+            putDBintoSS();
+            showSS();
+        }
+
+        button.onclick = function () {
+
+            paintCuadrados();
+        }
+
+        function putDBintoSS() {
+    
+            let db = openDatabase("cuadrados01", "1.0", "Comentario", 2 * 1024 * 1024);
+
+            db.transaction(function (tx) {
+                
+                let query = "SELECT * FROM cuadrados;";
+
+                tx.executeSql(query, [], function (tx, resutados) { 
+
+                    let len = resutados.rows.length;
+
+                    for (let i = 0; i < len; i++) {
+
+                        ss.setItem(resutados.rows.item(i).nombre + resutados.rows.item(i).atributo, resutados.rows.item(i).valor);
+                    }
+
+                    showSS();
+
+                });
+            });
+        }
+
+        function showSS() {
+
+            let msg = "";
+
+            for (let i = 0; i < ss.length; i++) {
+                
+                msg += "<p><b>" + ss.key(i) + "</b> - " + ss.getItem(ss.key(i)) + "</p>";
+            }
+
+            datosSS.innerHTML = msg;
+        }
+
+        function paintCuadrados() {
+
+            let ctx = canvas.getContext("2d");
+            
+            ctx.fillRect(ss.getItem("Cuadrado01x"), ss.getItem("Cuadrado01y"), ss.getItem("Cuadrado01width"), ss.getItem("Cuadrado01height"));
+            ctx.fillRect(ss.getItem("Cuadrado02x"), ss.getItem("Cuadrado02y"), ss.getItem("Cuadrado02width"), ss.getItem("Cuadrado02height"));
+        }
+    </script>
+</body>
+</html>

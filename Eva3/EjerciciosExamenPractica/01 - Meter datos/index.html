@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ejercicio05 - Carrito</title>
+</head>
+<body>
+    <div id="content">
+
+        <h1>TIENDA ONLINE</h1>
+        <div>
+            <p>User</p>
+            <input type="text" id="user">   
+        </div>
+        
+        <div id="products">
+
+            <table>
+
+                <tr><th>IMAGEN</th><th>DESCRIPCIÓN</th><th>COMPRAR</th></tr>
+
+                <tr>
+                    <td><img src="./src/icons/acer.jpg" alt="Acer"></td>
+                    <td>Ordenador Acer</td>
+                    <td><button id="Acer">Comprar</button></td>
+                </tr>
+                <tr>
+                    <td><img src="./src/icons/apple.JPG" alt="Apple"></td>
+                    <td>Ordenador Apple</td>
+                    <td><button id="Apple">Comprar</button></td>
+                </tr>
+                <tr>
+                    <td><img src="./src/icons/dell.jpg" alt="Dell"></td>
+                    <td>Ordenador Dell</td>
+                    <td><button id="Dell">Comprar</button></td>
+                </tr>
+                <tr>
+                    <td><img src="./src/icons/pb.jpg" alt="Pb"></td>
+                    <td>Ordenador pb</td>
+                    <td><button id="Pb">Comprar</button></td>
+                </tr>
+                <tr>
+                    <td><img src="./src/icons/sony.jpg" alt="Sony"></td>
+                    <td>Ordenador Sony</td>
+                    <td><button id="Sony">Comprar</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="cart">
+            <h4>Estado del carrito</h4>
+            <div id="productsCart"></div>
+            <div id="totalImport"></div>
+            <button id="reset">Reset</button>
+            <button id="saveCart">Guardar</button>
+        </div>
+        <div id="footer"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

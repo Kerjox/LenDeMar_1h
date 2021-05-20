@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardar cuadros</title>
+</head>
+<body>
+    
+    <div id="operation"></div>
+
+    <script>
+
+        const operation = document.querySelector("#operation");
+
+        window.onload = function () {
+
+            generateBD();
+        }
+
+        function generateBD() {
+                
+            let db = openDatabase("cuadrados01", "1.0", "Comentario", 2 * 1024 * 1024);
+
+                db.transaction(function(tx){
+            
+                    tx.executeSql("DROP TABLE IF EXISTS cuadrados;", [], function() {
+            
+                        tx.executeSql("CREATE TABLE cuadrados (nombre, atributo, valor);", [], function() {
+            
+                            tx.executeSql("INSERT INTO cuadrados VALUES (\'Cuadrado01\', \'x\', 10);");
+                            tx.executeSql("INSERT INTO cuadrados VALUES (\'Cuadrado01\', \'y\', 10);");
+                            tx.executeSql("INSERT INTO cuadrados VALUES (\'Cuadrado01\', \'width\', 50);");
+                            tx.executeSql("INSERT INTO cuadrados VALUES (\'Cuadrado01\', \'height\', 50);");
+
+                            tx.executeSql("INSERT INTO cuadrados VALUES (\'Cuadrado02\', \'x\', 100);");
+                            tx.executeSql("INSERT INTO cuadrados VALUES (\'Cuadrado02\', \'y\', 100);");
+                            tx.executeSql("INSERT INTO cuadrados VALUES (\'Cuadrado02\', \'width\', 100);");
+                            tx.executeSql("INSERT INTO cuadrados VALUES (\'Cuadrado02\', \'height\', 100);");
+                        });
+
+                        operation.innerHTML = "DB generada";
+                    });
+                });
+            }
+    </script>
+</body>
+</html>

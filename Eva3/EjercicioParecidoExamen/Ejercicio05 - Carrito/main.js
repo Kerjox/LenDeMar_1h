@@ -112,7 +112,7 @@ saveButton.onclick = function () {
     saveCart();
 }
 
-function saveCart(){
+function saveCart() {
 
     if (ss.length == 0) return;
         

@@ -20,14 +20,22 @@
                tx.executeSql("SELECT * FROM datos", [], function(tx, resultados){
 
                     var len = resultados.rows.length;
-                    let msg = "<p> Número de filas: " + len + "</p>";
-                    //estado.innerHTML = msg;
-                    for(i = 0; i < len; i++){
+                    let msg = "<table border=\"1\">";
+                    
+                    msg += "<tr>\
+                         <th>Producto</th>\
+                         <th>Cantidad</th>\
+                         </tr>"
                          
-                         console.log(resultados.rows);
-                         msg += "<p><b>" + resultados.rows.item(i).nombre + "</b> - " + resultados.rows.item(i).cantidad + "</p>";
-                    }
+                    for(i = 0; i < len; i++) {
 
+                         msg += "<tr>";
+                         console.log(resultados.rows);
+                         msg += "<td>" + resultados.rows.item(i).nombre + "</td>"
+                         msg += "<td>" + resultados.rows.item(i).cantidad + "</td>";
+                         msg += "</tr>";
+                    }
+                    msg += "</table>"
                     estado.innerHTML = msg;
                });
           });
